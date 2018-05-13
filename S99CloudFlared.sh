@@ -1,11 +1,12 @@
 #!/bin/sh
 
-PIDFILE="./cloudflared.pid"
+CLOUDFLARED="/volume1/@appstore/cloudflared/cloudflared"
+PIDFILE="/var/run/cloudflared.pid"
 
 
 case "$1" in
 	start)
-		/usr/local/bin/cloudflared --config ./CloudFlared.yml &
+		$CLOUDFLARED --config ./CloudFlared.yml &
 		printf "[%4s]\n" "done"
 		;;
 	stop)
