@@ -1,2 +1,6 @@
-# CloudFlared.yaml
+# CloudFlared.yml
+
+proxy-dns:
+        address: 0.0.0.0
+        pidfile: /var/run/cloudflared.pid
 
