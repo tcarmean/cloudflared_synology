@@ -1,5 +1,8 @@
 #!/bin/sh
 
+PIDFILE="/var/run/cloudflared.pid"
+
+
 case "$1" in
 	start)
 		/volume1/@appstore/cloudflared/cloudflared proxy-dns --address 0.0.0.0 &
@@ -7,6 +10,7 @@ case "$1" in
 		;;
 	stop)
 		printf "%-30s" "Stopping CloudFlared"
+		rm $PIDFILE
 		printf "[%4s]\n" "done"
 		;;
 	*)
