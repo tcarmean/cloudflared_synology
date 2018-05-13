@@ -5,7 +5,7 @@ PIDFILE="/var/run/cloudflared.pid"
 
 case "$1" in
 	start)
-		/volume1/@appstore/cloudflared/cloudflared proxy-dns --address 0.0.0.0 &
+		/volume1/@appstore/cloudflared/cloudflared --config /volume1/@appstore/cloudflared/CloudFlared.yml &
 		printf "[%4s]\n" "done"
 		;;
 	stop)
