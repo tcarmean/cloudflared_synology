@@ -6,6 +6,7 @@ PIDFILE="/var/run/cloudflared.pid"
 
 case "$1" in
 	start)
+		printf "%-30s" "starting CloudFlared"
 		$CLOUDFLARED --config ./CloudFlared.yml > /dev/null 2&>1 &
 		printf "[%4s]\n" "done"
 		;;
