@@ -6,12 +6,12 @@ PIDFILE="/var/run/cloudflared.pid"
 
 case "$1" in
 	start)
-		$CLOUDFLARED --config ./CloudFlared.yml &
+		$CLOUDFLARED --config ./CloudFlared.yml > /dev/null &
 		printf "[%4s]\n" "done"
 		;;
 	stop)
 		printf "%-30s" "Stopping CloudFlared"
-		kill `cat $PIDFILE`
+		kill `cat $PIDFILE` > /dev/null
 		rm $PIDFILE
 		printf "[%4s]\n" "done"
 		;;
