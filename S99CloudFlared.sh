@@ -1,11 +1,11 @@
 #!/bin/sh
 
-PIDFILE="/var/run/cloudflared.pid"
+PIDFILE="./cloudflared.pid"
 
 
 case "$1" in
 	start)
-		/volume1/@appstore/cloudflared/cloudflared --pidfile $PIDFILE proxy-dns --address 0.0.0.0 &
+		/usr/local/bin/cloudflared --config ./CloudFlared.yml &
 		printf "[%4s]\n" "done"
 		;;
 	stop)
