@@ -14,7 +14,7 @@ case "$1" in
 		printf "[%4s]\n" "done"
 		;;
 	*)
-		echo "Usage: $0 {start|stop}
+		echo "Usage: $0 {start|stop}"
 		exit 1
 esac
 
