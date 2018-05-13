@@ -10,7 +10,7 @@ case "$1" in
 		;;
 	stop)
 		printf "%-30s" "Stopping CloudFlared"
-		kill < $PIDFILE
+		kill `cat $PIDFILE`
 		rm $PIDFILE
 		printf "[%4s]\n" "done"
 		;;
