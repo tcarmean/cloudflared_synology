@@ -2,5 +2,5 @@
 
 proxy-dns: true
 address: 0.0.0.0
-pidfile: ./cloudflared.pid
+pidfile: /var/run/cloudflared.pid
 
