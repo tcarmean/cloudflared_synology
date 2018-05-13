@@ -1,6 +1,6 @@
 # CloudFlared.yml
 
 proxy-dns: true
-        address: 0.0.0.0
-        pidfile: /var/run/cloudflared.pid
+  address: 0.0.0.0
+pidfile: /var/run/cloudflared.pid
 
