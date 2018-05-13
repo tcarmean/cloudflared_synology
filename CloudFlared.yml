@@ -1,4 +1,4 @@
 # CloudFlared.yml
 
-- proxy-dns: true
+proxy-dns
 
